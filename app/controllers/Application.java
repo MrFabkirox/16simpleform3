@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import models.User;
@@ -13,7 +14,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-    	Random r = new Random();
+    	Integer r = new Random();
     	r.nextInt(2);
         return ok(index.render("16simpleform3 "+ r));
     }
