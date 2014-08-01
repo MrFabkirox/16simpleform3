@@ -1,0 +1,16 @@
+@(userForm: Form[User])
+@import helper._
+
+@main("16simpleform3") {
+
+	@helper.form(action=routes.Application.show(), 'id -> "userForm") {
+		@helper.inputText(userForm("name"))
+		@helper.inputText(userForm("mess"))
+		<input type='submit' class='btn' value='send'>
+	}
+	
+	<br />
+	<br />
+	16simpleform3
+    <br />
+}

@@ -1,0 +1,27 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    	
+    	<form action='@routes.Application.index()' type='GET'>
+    		<input type='submit'>to index</input>
+    	</form>
+    	
+    	<form action='@routes.Application.form()' type='GET'>
+    		<input type='submit'>to form</input>
+    	</form>
+    	
+    	<br />
+    	
+        @content
+        
+    </body>
+</html>
